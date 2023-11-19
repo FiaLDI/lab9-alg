@@ -4,7 +4,7 @@
 
 import time
 
-def binary_poisk(array, target):
+def binaryPoisk(array, target):
     low = 0
     high = len(array) - 1
 
@@ -18,18 +18,14 @@ def binary_poisk(array, target):
             high = mid - 1
 
     return -1
-
-def main():
+ 
+if __name__ == '__main__':
     for i in range(100, 1000, 100):
         a = [j for j in range(i)]
         b = 0
-        for o in range(len(a), i + 1000):
+        for o in range(len(a) - 1, 1, -1):
             start = time.perf_counter()
-            binary_poisk(a, o)
+            r = binaryPoisk(a, o)
             end = time.perf_counter()
             b += end-start
-        print(f"{b/(i + 1000 - 1):.10f}")
-
-        
-if __name__ == '__main__':
-    main()
+        print(f"{b/(i - 3):.10f}")
