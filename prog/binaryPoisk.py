@@ -5,6 +5,9 @@
 import time
 
 def binary_poisk(array, target):
+    """
+    Функция бинароного поиска.
+    """
     low = 0
     high = len(array) - 1
 
@@ -20,6 +23,9 @@ def binary_poisk(array, target):
     return -1
 
 def main():
+    """
+    Главная функция программы.
+    """
     for size_of_list in range(100, 1000, 100):
         list_of_nums = [j for j in range(size_of_list)]
         time_full = 0
