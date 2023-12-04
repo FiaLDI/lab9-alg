@@ -4,18 +4,18 @@
 
 import time
 
-def binary_poisk(array, target):
+def binary_poisk(list_of_nums, target):
     """
     Функция бинароного поиска.
     """
     low = 0
-    high = len(array) - 1
+    high = len(list_of_nums) - 1
 
     while low <= high:
         mid = (low + high) // 2
-        if array[mid] == target:
+        if list_of_nums[mid] == target:
             return mid
-        elif array[mid] < target:
+        elif list_of_nums[mid] < target:
             low = mid + 1
         else:
             high = mid - 1
