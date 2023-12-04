@@ -4,6 +4,7 @@
 
 import time
 
+
 def binary_poisk(list_of_nums, target):
     """
     Функция бинароного поиска.
@@ -22,6 +23,7 @@ def binary_poisk(list_of_nums, target):
 
     return -1
 
+
 def main():
     """
     Главная функция программы.
@@ -37,6 +39,7 @@ def main():
             time_full += time_end-time_start
 
         print(f"{time_full/(size_of_list - 3):.10f}")
+ 
  
 if __name__ == '__main__':
     main()
